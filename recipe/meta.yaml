@@ -1,5 +1,5 @@
 {% set name = "miutil" %}
-{% set version = "0.9.1" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8160bc1306ff793b868c2344ea9b8c4220e09afb043d2cc3ab866a98966a2c5
+  sha256: 41fb53065172cff8a4104efae885b9b6064f08b073ec742b25eb7922c0161e11
 
 build:
   noarch: python
