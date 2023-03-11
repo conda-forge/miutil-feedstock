@@ -1,5 +1,5 @@
 {% set name = "miutil" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41fb53065172cff8a4104efae885b9b6064f08b073ec742b25eb7922c0161e11
+  sha256: 032d3e3241d0b40120c9f13bcbfb08e5ee10bcbd9b79cdfe57e74aaba3a71b8a
 
 build:
   noarch: python
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.4
+    - python >=3.7
     - pip
     - setuptools_scm >=3.4
     - toml
   run:
-    - python >=3.4
+    - python >=3.7
     - nibabel
     - numpy
     - matplotlib-base
