@@ -1,13 +1,14 @@
 {% set name = "miutil" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 032d3e3241d0b40120c9f13bcbfb08e5ee10bcbd9b79cdfe57e74aaba3a71b8a
+  url: https://github.com/AMYPAD/{{ name }}/releases/download/v{{ version }}/miutil-{{ version }}.tar.gz
+  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f747e189bde7913055ecdca94fc6327b9c71fb65c56fe6baba6d92601e81441e
 
 build:
   noarch: python
@@ -33,7 +34,6 @@ requirements:
     - pynvml
     - requests
     - tqdm >=4.42.0
-    - setuptools
 
 test:
   requires:
@@ -44,7 +44,6 @@ test:
     - pytest-xdist
   source_files:
     - tests
-    - setup.cfg
     - pyproject.toml
   imports:
     - miutil
